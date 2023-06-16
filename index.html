@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CHART</title>
+</head>
+<body>
+  <h1>CHART</h1>
+  <p>This repository provides a Crossplane configuration for deploying a pre-configured Amazon DynamoDB table. The purpose of the repository is to allow users to quickly and easily deploy this DynamoDB table to their AWS account.</p>
+
+  <h2>Features</h2>
+  <ul>
+    <li>Amazon DynamoDB table configured with the following attributes:</li>
+    <ul>
+      <li>`UserId` of type String</li>
+      <li>`GameTitle` of type String</li>
+      <li>`TopScore` of type Number</li>
+    </ul>
+    <li>The table operates in `PROVISIONED` billing mode.</li>
+    <li>Global Secondary Index on `GameTitle` with `TopScore` as range key.</li>
+    <li>Tagged with `Environment: production` and `Name: dynamodb-table-1`.</li>
+    <li>Provisioned Read and Write capacity of 20 units.</li>
+  </ul>
+
+  <h2>Usage</h2>
+  <p>To deploy this DynamoDB table to your AWS account, you'll need to have Crossplane installed and configured with your AWS credentials. Then, you can apply the configuration in this repository with the command:</p>
+  <pre>
+    <code>
+    kubectl apply -f &lt;configuration-file.yaml&gt;
+    </code>
+  </pre>
+</body>
+</html>
