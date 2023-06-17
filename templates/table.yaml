@@ -1,10 +1,18 @@
 apiVersion: dynamodb.aws.upbound.io/v1beta1
 kind: Table
 metadata:
-  name: board
-  annotations:
-    meta.upbound.io/example-id: dynamodb/v1beta1/globaltable
+  name: dynamodb-table
+  namespace: epinio
 spec:
+  publishConnectionDetailsTo:
+    name: dynamodb-table-conn
+    metadata:
+      labels:
+        app.kubernetes.io/instance: dynamodb-table
+      annotations:
+        kubed.appscode.com/sync: "kubernetes.io/metadata.name=epinio"
+  providerConfigRef:
+      name: aws-upbound
   forProvider:
     region: us-east-1
     attribute:

@@ -3,12 +3,12 @@ entries:
   DynamoDBTable-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-06-16T06:36:07.381181-03:00"
+    created: "2023-06-16T21:08:07.744325-03:00"
     description: A Helm chart for Kubernetes
-    digest: c5b8b33ecd4f1e0ec05005f3d60418585657634310328931f69c16ee9115be0f
+    digest: b26f4e9db29183e6968d413766fd1c7cbcccfd2e440054b260e112d595242027
     name: DynamoDBTable-chart
     type: application
     urls:
     - DynamoDBTable-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-06-16T06:36:07.380574-03:00"
+generated: "2023-06-16T21:08:07.743644-03:00"
