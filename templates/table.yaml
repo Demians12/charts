@@ -12,7 +12,7 @@ spec:
       annotations:
         kubed.appscode.com/sync: "kubernetes.io/metadata.name=epinio"
   providerConfigRef:
-      name: aws-upbound
+      name: aws-provider-config
   forProvider:
     region: us-east-1
     attribute:
