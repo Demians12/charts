@@ -15,27 +15,23 @@ spec:
       name: aws-provider-config
   forProvider:
     region: us-east-1
-    attribute:
-    - name: UserId
-      type: S
-    - name: GameTitle
-      type: S
-    - name: TopScore
-      type: "N"
-    billingMode: PROVISIONED
-    globalSecondaryIndex:
-    - hashKey: GameTitle
-      name: GameTitleIndex
-      nonKeyAttributes:
-      - UserId
-      projectionType: INCLUDE
-      rangeKey: TopScore
-      readCapacity: 10
-      writeCapacity: 10
-    hashKey: UserId
-    rangeKey: GameTitle
-    readCapacity: 20
     tags:
-      Environment: production
-      Name: dynamodb-table-1
-    writeCapacity: 20
+    - key: env
+      value: test
+    attributeDefinitions:
+    - attributeName: UserId
+      attributeType: S
+    - attributeName: GameTitle
+      attributeType: S
+    - attributeName: TopScore
+      attributeType: "N"
+    keySchema:
+    - attributeName: Name
+      keyType: HASH
+    - attributeName: Surname
+      keyType: RANGE
+    provisionedThroughput:
+      readCapacityUnits: 7
+      writeCapacityUnits: 7
+    billingMode: PROVISIONED
+
