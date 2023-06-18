@@ -1,4 +1,4 @@
-apiVersion: dynamodb.aws.upbound.io/v1beta1
+apiVersion: dynamodb.aws.crossplane.io/valpha1
 kind: Table
 metadata:
   name: dynamodb-table
