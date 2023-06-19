@@ -5,7 +5,7 @@ metadata:
   namespace: epinio
 spec:
   publishConnectionDetailsTo:
-    name: dynamodb-table-conn
+    name: dynamodb-table
     metadata:
       labels:
         app.kubernetes.io/instance: dynamodb-table
@@ -14,7 +14,7 @@ spec:
   providerConfigRef:
       name: aws-provider-config
   forProvider:
-    region: us-east-1
+    region: us-west-1
     tags:
     - key: env
       value: test
