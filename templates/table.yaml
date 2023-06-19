@@ -5,7 +5,7 @@ metadata:
   namespace: epinio
 spec:
   publishConnectionDetailsTo:
-    name: dynamodb-table
+    name: dynamodb-table-conn
     metadata:
       labels:
         app.kubernetes.io/instance: dynamodb-table
