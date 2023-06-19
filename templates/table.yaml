@@ -19,12 +19,10 @@ spec:
     - key: env
       value: test
     attributeDefinitions:
-    - attributeName: UserId
+    - attributeName: Name
       attributeType: S
-    - attributeName: GameTitle
+    - attributeName: Surname
       attributeType: S
-    - attributeName: TopScore
-      attributeType: "N"
     keySchema:
     - attributeName: Name
       keyType: HASH
